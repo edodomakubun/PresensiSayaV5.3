@@ -1,8 +1,8 @@
-import { getState } from './state.js';
+import { getState, setIsScanning } from './state.js';
 import { callApi } from './api.js';
 import { showNotif, switchTab } from './ui.js';
 import { initAuth, handleLogin, handleLogout, handleSetup } from './auth.js';
-import { startScanner, handleQRImage, resetScannerUI } from './scanner.js';
+import { startScanner, resetScannerUI } from './scanner.js';
 import { loadHistory } from './history.js';
 
 // --- FITUR: PENGAJUAN IZIN ---
@@ -83,11 +83,6 @@ window.addEventListener('DOMContentLoaded', () => {
   const btnStartScanner = document.getElementById('btn-start-scanner');
   if (btnStartScanner) {
     btnStartScanner.addEventListener('click', startScanner);
-  }
-
-  const qrFileInput = document.getElementById('qr-file-input');
-  if (qrFileInput) {
-    qrFileInput.addEventListener('change', handleQRImage);
   }
 
   // 7. Event Listener untuk Izin
