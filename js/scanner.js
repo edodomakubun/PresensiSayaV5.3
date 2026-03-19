@@ -146,7 +146,7 @@ export function processAbsenFromQR(qrText) {
         if (btn) btn.innerHTML = '<i class="fa-solid fa-rotate-right"></i> Coba Ulangi';
       }
     },
-    { enableHighAccuracy: true, timeout: 10000, maximumAge: 0 }
+    { enableHighAccuracy: true, timeout: 30000, maximumAge: 10000 }
   );
 }
 
