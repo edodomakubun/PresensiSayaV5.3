@@ -1,0 +1,11 @@
+/* Safe area untuk iPhone/Android modern */
+.pb-safe { padding-bottom: env(safe-area-inset-bottom, 20px); }
+/* Hide scrollbar untuk tampilan mirip aplikasi */
+::-webkit-scrollbar { width: 0px; background: transparent; }
+body { -webkit-tap-highlight-color: transparent; }
+
+.animate-fade-in { animation: fadeIn 0.3s ease-in-out; }
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
